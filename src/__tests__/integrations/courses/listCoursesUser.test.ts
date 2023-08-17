@@ -1,5 +1,5 @@
 import supertest from 'supertest'
-import app from '../../../app'
+import { app } from '../../../app'
 import { client } from '../../../database'
 import { configureTestDatabase } from '../../configs/configTestsDatabase'
 import {

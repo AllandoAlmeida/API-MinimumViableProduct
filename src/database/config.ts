@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { Client, ClientConfig } from "pg";
 
-const config = (): ClientConfig => {
+export const config = (): ClientConfig => {
   if (process.env.NODE_ENV === "test") {
     return {
       user: process.env.DB_TEST_USER,
@@ -21,6 +21,4 @@ const config = (): ClientConfig => {
   };
 };
 
-const client: Client = new Client(config());
-
-export default client;
+export const client: Client = new Client(config());
